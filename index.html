@@ -12,12 +12,18 @@
 </head>
 
 <body>
-    <section
-        class="md:h-[78vh] bg-[url('../images/landing-page/hero-bg.png')] bg-cover bg-center bg-no-repeat md:m-8 md:rounded-3xl">
-        <!-- navbar starts -->
-        <div class="flex justify-between items-center sm:mx-10 sm:pt-10 md:bg-transparent" id="nav-list">
-            <ul class="hidden absolute top-[10.6%] sm:static flex flex-col items-center sm:static sm:flex sm:flex-row sm:gap-10 sm:w-[35%] w-full sm:bg-transparent bg-[rgba(0,0,0,0.8)]"
-                id="nav-item-list-left">
+    <nav class="absolute w-full">
+        <!-- navbar mobile view starts -->
+        <div class="flex flex-col justify-between items-center sm:bg-transparent sm:hidden" id="nav-list">
+            <div class="flex justify-between w-full">
+                <a class="ml-5 mt-3 sm:ml-0 sm:mt-0" href="#" target="2"><img
+                        src="./images/landing-page/header-logo.svg" alt="logo"></a>
+                <button class="sm:hidden mr-5 mt-3" id="dropdown-button" onclick="dropdown()"><i
+                        class="fas fa-regular fa-bars text-white"></i></button>
+                <button class="hidden sm:hidden mr-5 mt-3" id="cross-button" onclick="removeDropdown()"><i
+                        class="fa-solid fa-xmark text-white"></i></button>
+            </div>
+            <ul class="hidden flex flex-col items-center w-full sm:bg-transparent " id="nav-item-list-left">
                 <li class="my-5 sm:my-0">
                     <a class="text-white flex gap-2" href="#" target="_blank"><img
                             src="./images/landing-page/flights-icon-white.svg" alt="flights">
@@ -31,14 +37,7 @@
                     </a>
                 </li>
             </ul>
-            <a class="ml-5 mt-3 sm:ml-0 sm:mt-0" href="#" target="2"><img src="./images/landing-page/header-logo.svg"
-                    alt="logo"></a>
-            <button class="sm:hidden mr-5 mt-3" id="dropdown-button" onclick="dropdown()"><i
-                    class="fas fa-regular fa-bars text-white"></i></button>
-            <button class="hidden sm:hidden mr-5 mt-3" id="cross-button" onclick="removeDropdown()"><i
-                    class="fa-solid fa-xmark text-white"></i></button>
-            <ul class="hidden absolute top-[38.8%] w-full sm:w-[35%]  flex flex-col items-center sm:static sm:flex sm:flex-row sm:justify-end sm:gap-10 sm:bg-transparent bg-[rgba(0,0,0,0.8)]"
-                id="nav-item-list-right">
+            <ul class="hidden flex flex-col items-center w-full sm:bg-transparent" id="nav-item-list-right">
                 <li class="my-5 sm:my-0">
                     <a class="text-white hover:bg-white hover:text-black py-3 px-5 rounded-lg" href="#"
                         target="_blank">Login</a>
@@ -50,8 +49,40 @@
                 </li>
             </ul>
         </div>
-        <!-- navbar ends -->
-        <div class="text-center mt-24">
+        <!-- navbar mobile view ends -->
+        <!-- navbar desktop view starts -->
+        <div class="flex justify-between items-center mx-24 hidden sm:flex" id="nav-list">
+            <ul class="flex items-center gap-10">
+                <li class="my-5">
+                    <a class="text-white flex gap-2" href="#" target="_blank"><img
+                            src="./images/landing-page/flights-icon-white.svg" alt="flights">
+                        <p>Find Flight</p>
+                    </a>
+                </li>
+                <li class="my-5">
+                    <a class="text-white flex gap-2" href="#" target="_blank"><img
+                            src="./images/landing-page/find-stays-icon-white.svg" alt="stays">
+                        <p>Find Stays</p>
+                    </a>
+                </li>
+            </ul>
+            <a class="flex" href="#" target="2"><img src="./images/landing-page/header-logo.svg" alt="logo"></a>
+            <ul class="flex items-center gap-10">
+                <li class="my-5">
+                    <a class="text-white hover:bg-white hover:text-black py-3 px-5 rounded-lg" href="#"
+                        target="_blank">Login</a>
+                </li>
+                <li class="my-5">
+                    <a class="text-white hover:bg-white hover:text-black py-3 px-5 rounded-lg" href="#"
+                        target="_blank">Sign up</a>
+                </li>
+            </ul>
+        </div>
+        <!-- navbar desktop view ends -->
+    </nav>
+    <section
+        class="md:h-[78vh] bg-[url('../images/landing-page/hero-bg.png')] bg-cover bg-center bg-no-repeat sm:m-8 sm:rounded-3xl">
+        <div class="text-center pt-24">
             <h2 class="text-white text-3xl sm:text-5xl py-3">Helping Others</h2>
             <h1 class="text-white text-6xl sm:text-8xl py-3">LIVE & TRAVEL</h1>
             <p class="text-white py-3">Special offers to suit your plan</p>

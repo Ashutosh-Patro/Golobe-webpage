@@ -10,8 +10,6 @@ function dropdown() {
     navLeft.classList.toggle('hidden')
     navRight.classList.toggle('hidden')
     navBar.style.background = 'rgba(0,0,0,0.8)'
-    // navLeft.style.background = 'rgba(0,0,0,0.8)'
-    // navRight.style.background = 'rgba(0,0,0,0.8)'
 }
 
 function removeDropdown() {
